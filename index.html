@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Chatbot Translator</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="language">Select Language:</label>
+        <select name="language" id="language" required>
+            <option value="French">French</option>
+            <option value="Spanish">Spanish</option>
+            <option value="German">German</option>
+            <option value="Arabic">Arabic</option>
+        </select>
+        <br><br>
+
+        <label for="file">Upload Audio File (MP3):</label>
+        <input type="file" name="file" id="file" accept=".mp3" required>
+        <br><br>
+
+        <button type="submit">Translate</button>
+    </form>
+</body>
+</html>
